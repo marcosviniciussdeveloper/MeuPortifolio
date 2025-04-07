@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Marcos Vinicius</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Meu Portfolio</div>
+                <button class="hamburger" id="hamburger">☰</button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Olá, eu sou <span style="color: #3498db;">Marcos Vinicius</span></h1>
+                <p>Desenvolvedor Fullstack | C# | Node.js | MySQL | Docker</p>
+                <a href="#projetos" class="btn">Ver meus projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mim -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-img">
+                    <img src="/img/Minha.jpeg" alt="Minha foto">
+                </div>
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p>Olá! Sou um desenvolvedor fullstack especializado em criar soluções back-end robustas e
+                        eficientes.
+                        Com experiência sólida tanto em front-end quanto em back-end, desenvolvo aplicações completas
+                        que
+                        atendem às necessidades do mercado atual.</p>
+                    <p>No back-end, trabalho principalmente com C# e Nodejs, construindo APIs e serviços escaláveis.
+                        Tenho
+                        experiência com bancos de dados MySQL e utilizo Docker para garantir ambientes de
+                        desenvolvimento e
+                        produção consistentes.</p>
+                    <p>Minha abordagem combina habilidades técnicas sólidas com um olhar atento ao design e experiência
+                        do
+                        usuário. Estou sempre buscando aprender novas tecnologias e me manter atualizado com as
+                        tendências
+                        do mercado.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="#contato" class="btn">Entre em contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Minhas Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Desenvolvimento Frontend</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Tailwind CSS, Bootstrap</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Desenvolvimento Backend</h3>
+                    <p>C#, .NET Core, Node.js, Express, MySQL, REST APIs, Microserviços</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Banco de Dados & DevOps</h3>
+                    <p>MySQL, SQL Server, Docker, Containerização, CI/CD, Versionamento Git</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>Desenvolvimento Mobile</h3>
+                    <p>.Net Maui, Progressive Web Apps (PWA), Design Adaptativo, Mobile-First</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Meus Projetos</h2>
+            <div class="projetos-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="csharp">.NET/C#</button>
+                <button class="filter-btn" data-filter="node">Node.js</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="outros">Outros</button>
+            </div>
+            <div class="projetos-grid" id="projetos-grid">
+                <div class="projeto-card" data-category="web csharp">
+                    <img src="/img/MeuPontoOnline.png" alt="Sistema de Ponto Online" class="projeto-img">
+                    <div class="projeto-overlay">
+                        <h3 class="projeto-title">Sistema de Ponto Online</h3>
+                        <p class="projeto-categoria">C# | Razor Pages | Supabase</p>
+                        <p>Aplicação web para registro de ponto eletrônico com controle de horários de entrada e saída
+                            dos funcionários. Desenvolvido com ASP.NET Razor Pages, utilizando Supabase para
+                            persistência e autenticação de dados.</p>
+                        <div class="projeto-links">
+                            <a href="#" target="_blank">Demo</a>
+                            <a href="#" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto-card" data-category="csharp">
+                    <img src="/img/Api.png" alt="API CRUD C#" class="projeto-img">
+                    <div class="projeto-overlay">
+                        <h3 class="projeto-title">API CRUD C#</h3>
+                        <p class="projeto-categoria">.NET 8 | EF Core | Docker | Render</p>
+                        <p>Uma API RESTful construída em .NET 8 com suporte a Docker e deploy no Render. Utiliza Entity
+                            Framework Core com banco de dados SQLite, Swagger para documentação e está containerizada
+                            para facilitar o desenvolvimento e deploy.</p>
+                        <div class="projeto-links">
+                            <a href="#" target="_blank">Demo</a>
+                            <a href="#" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>marcosviniciuss.dev@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon">📱</div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>+55 (71) 98440-7507</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon">📍</div>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>Salvador, Ba - Brasil</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <form id="formulario-contato">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Seu Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Meu Portfolio</div>
+                <div class="social-links">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">LI</a>
+                    <a href="#" class="social-icon">GH</a>
+                </div>
+                <p class="copyright">© 2025 Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
