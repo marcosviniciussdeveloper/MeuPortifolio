@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio Marcos Vinicius</title>
+    <title>Portfólio Marcos Vinicius</title>
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Meu Portfolio</div>
+                <div class="logo">Meu Portfólio</div>
                 <button class="hamburger" id="hamburger">☰</button>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="hero-content fade-in">
                 <h1>Olá, eu sou <span style="color: #3498db;">Marcos Vinicius</span></h1>
-                <p>Desenvolvedor Fullstack | C# | Node.js | MySQL | Docker</p>
+                <p>Desenvolvedor Fullstack | HTML | CSS | JavaScript | Node.js | C# | Docker</p>
                 <a href="#projetos" class="btn">Ver meus projetos</a>
             </div>
         </div>
@@ -46,11 +46,14 @@
                 </div>
                 <div class="sobre-text">
                     <h2 class="section-title">Sobre Mim</h2>
-                    <p>Olá! Sou um desenvolvedor fullstack especializado em criar soluções back-end robustas e
-                        eficientes.</p>
-                    <p>No back-end, trabalho principalmente com C# e Nodejs, construindo APIs e serviços escaláveis.</p>
-                    <p>Minha abordagem combina habilidades técnicas sólidas com um olhar atento ao design e experiência
-                        do usuário.</p>
+                    <p>Olá! Sou um desenvolvedor fullstack apaixonado por criar soluções tecnológicas eficientes e
+                        inovadoras.</p>
+                    <p>No front-end, trabalho com HTML, CSS e JavaScript para construir interfaces intuitivas e
+                        responsivas.</p>
+                    <p>No back-end, sou especializado em Node.js e C#, desenvolvendo APIs robustas e sistemas
+                        escaláveis.</p>
+                    <p>Possuo experiência com bancos de dados, Docker e implementação de arquiteturas modernas de
+                        software.</p>
                     <div style="margin-top: 30px;">
                         <a href="#contato" class="btn">Entre em contato</a>
                     </div>
@@ -67,22 +70,22 @@
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h3>Desenvolvimento Frontend</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Tailwind CSS, Bootstrap</p>
+                    <p>HTML5, CSS3, JavaScript, Design Responsivo, UI/UX Básico</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔧</div>
                     <h3>Desenvolvimento Backend</h3>
-                    <p>C#, .NET Core, Node.js, Express, MySQL, REST APIs, Microserviços</p>
+                    <p>Node.js, C#, .NET Core, REST APIs, Arquitetura de Software</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🗄️</div>
                     <h3>Banco de Dados & DevOps</h3>
-                    <p>MySQL, SQL Server, Docker, Containerização, CI/CD, Versionamento Git</p>
+                    <p>SQL Server, MySQL, MongoDB, Docker, Containerização, Git</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Desenvolvimento Mobile</h3>
-                    <p>.Net Maui, Progressive Web Apps (PWA), Design Adaptativo, Mobile-First</p>
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Ferramentas & Metodologias</h3>
+                    <p>VS Code, Visual Studio, Metodologias Ágeis, CI/CD Básico</p>
                 </div>
             </div>
         </div>
@@ -95,9 +98,9 @@
             <div class="projetos-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="csharp">.NET/C#</button>
+                <button class="filter-btn" data-filter="csharp">C#</button>
                 <button class="filter-btn" data-filter="node">Node.js</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
                 <button class="filter-btn" data-filter="outros">Outros</button>
             </div>
             <div class="projetos-grid" id="projetos-grid">
@@ -111,19 +114,32 @@
                         <div class="projeto-links">
                             <a href="https://github.com/marcosviniciussdeveloper/Marcos_vinicius_portifolio"
                                 target="_blank">Demo</a>
-                            <a href="#" target="_blank">GitHub</a>
+                            <a href="https://github.com/marcosviniciussdeveloper/Marcos_vinicius_portifolio"
+                                target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="projeto-card" data-category="csharp">
+                <div class="projeto-card" data-category="csharp api">
                     <img src="/img/Api.png" alt="API CRUD C#" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">API CRUD C#</h3>
-                        <p class="projeto-categoria">.NET 8 | EF Core | Docker | Render</p>
-                        <p>Uma API RESTful construída em .NET 8 com suporte a Docker e deploy no Render.</p>
+                        <p class="projeto-categoria">.NET Core | EF Core | Docker</p>
+                        <p>Uma API RESTful construída em .NET Core com suporte a Docker e documentação Swagger.</p>
                         <div class="projeto-links">
                             <a href="https://api-crud-8jgp.onrender.com/swagger/index.html" target="_blank">Demo</a>
                             <a href="https://github.com/marcosviniciussdeveloper/API-CRUD-C-" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projeto-card" data-category="node api">
+                    <img src="/img/Api.png" alt="API Node.js" class="projeto-img">
+                    <div class="projeto-overlay">
+                        <h3 class="projeto-title">API REST com Node.js</h3>
+                        <p class="projeto-categoria">Node.js | Express | MongoDB</p>
+                        <p>API completa desenvolvida com Node.js, utilizando Express e banco de dados MongoDB.</p>
+                        <div class="projeto-links">
+                            <a href="#" target="_blank">Demo</a>
+                            <a href="https://github.com/marcosviniciussdeveloper" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +171,7 @@
                         <div class="contato-icon">📍</div>
                         <div>
                             <h3>Localização</h3>
-                            <p>Salvador, Ba - Brasil</p>
+                            <p>Salvador, BA - Brasil</p>
                         </div>
                     </div>
                 </div>
@@ -184,19 +200,16 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">Meu Portfolio</div>
+                <div class="logo">Marcos Vinicius</div>
                 <div class="social-links">
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/marcos-vinicius-742192245/" class="social-icon"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/marcosviniciussdeveloper" class="social-icon"><i
-                                class="fab fa-github"></i></a>
-                    </div>
-
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/marcos-vinicius-742192245/" class="social-icon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/marcosviniciussdeveloper" class="social-icon"><i
+                            class="fab fa-github"></i></a>
                 </div>
-                <p class="copyright">© 2025 Todos os direitos reservados.</p>
+                <p class="copyright">© 2025 Marcos Vinicius - Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
