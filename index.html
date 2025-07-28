@@ -10,6 +10,15 @@
 </head>
 
 <body>
+    <!-- Elementos decorativos de fundo -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
     <header>
         <div class="container">
             <nav>
@@ -27,20 +36,32 @@
     </header>
 
     <section class="hero" id="inicio">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>Olá, eu sou <span style="color: #3498db;">Marcos Vinicius</span></h1>
+                <h1>Olá, eu sou <span class="highlight">Marcos Vinicius</span></h1>
                 <p>Desenvolvedor Backend | C# | Docker</p>
-                <a href="#projetos" class="btn">Ver meus projetos</a>
+                <a href="#projetos" class="btn btn-primary">Ver meus projetos</a>
             </div>
         </div>
     </section>
 
     <section class="sobre" id="sobre">
+        <div class="section-bg">
+            <div class="bg-pattern"></div>
+        </div>
         <div class="container">
             <div class="sobre-content">
                 <div class="sobre-img">
-                    <img src="img/Minha.jpeg" alt="Minha foto">
+                    <div class="img-wrapper">
+                        <img src="img/Minha.jpeg" alt="Desenvolvedor profissional">
+                    </div>
                 </div>
                 <div class="sobre-text">
                     <h2 class="section-title">Sobre Mim</h2>
@@ -50,7 +71,7 @@
                     <p>Possuo experiência com bancos de dados, Docker e implementação de arquiteturas modernas de
                         software.</p>
                     <div style="margin-top: 30px;">
-                        <a href="#contato" class="btn">Entre em contato</a>
+                        <a href="#contato" class="btn btn-secondary">Entre em contato</a>
                     </div>
                 </div>
             </div>
@@ -58,20 +79,27 @@
     </section>
 
     <section class="habilidades" id="habilidades">
+        <div class="section-bg-skills">
+            <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </div>
         <div class="container">
             <h2 class="section-title center">Minhas Habilidades</h2>
             <div class="skills-container">
-                <div class="skill-card">
+                <div class="skill-card glass-effect">
                     <div class="skill-icon">🔧</div>
                     <h3>Desenvolvimento Backend</h3>
                     <p>C#, .NET Core, REST APIs, Arquitetura de Software</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card glass-effect">
                     <div class="skill-icon">🗄️</div>
                     <h3>Banco de Dados & DevOps</h3>
                     <p>SQL Server, MySQL, MongoDB, Docker, Containerização, Git</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card glass-effect">
                     <div class="skill-icon">⚙️</div>
                     <h3>Ferramentas & Metodologias</h3>
                     <p>VS Code, Visual Studio, Metodologias Ágeis, CI/CD Básico</p>
@@ -80,8 +108,14 @@
         </div>
     </section>
 
-<<<<<<< HEAD
     <section class="projetos" id="projetos">
+        <div class="section-bg-projects">
+            <div class="geometric-shapes">
+                <div class="geo-shape geo-1"></div>
+                <div class="geo-shape geo-2"></div>
+                <div class="geo-shape geo-3"></div>
+            </div>
+        </div>
         <div class="container">
             <h2 class="section-title center">Meus Projetos</h2>
             <div class="projetos-filter">
@@ -91,8 +125,9 @@
                 <button class="filter-btn" data-filter="outros">Outros</button>
             </div>
             <div class="projetos-grid" id="projetos-grid">
-                <div class="projeto-card" data-category="csharp">
-                    <img src="img/MeuPontoOnline.png" alt="Sistema de Ponto Online" class="projeto-img">
+                <div class="projeto-card glass-card" data-category="csharp">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Sistema de Ponto Online" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">Sistema de Ponto Online</h3>
                         <p class="projeto-categoria">C# | Razor Pages | Supabase</p>
@@ -104,8 +139,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="projeto-card" data-category="csharp api">
-                    <img src="img/Api.png" alt="API CRUD C#" class="projeto-img">
+                <div class="projeto-card glass-card" data-category="csharp api">
+                    <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="API CRUD C#" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">API CRUD C#</h3>
                         <p class="projeto-categoria">.NET Core | EF Core | Docker</p>
@@ -116,8 +152,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="projeto-card" data-category="csharp api">
-                    <img src="img/ApiAgendamentos.png" alt="API de Agendamentos" class="projeto-img">
+                <div class="projeto-card glass-card" data-category="csharp api">
+                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="API de Agendamentos" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">API de Agendamentos</h3>
                         <p class="projeto-categoria">ASP.NET Core | Entity Framework | MySQL</p>
@@ -130,8 +167,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="projeto-card" data-category="csharp api outros">
-                    <img src="img/MeuCombustivel.png" alt="API Meu Combustível" class="projeto-img">
+                <div class="projeto-card glass-card" data-category="csharp api outros">
+                    <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="API Meu Combustível" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">API Meu Combustível</h3>
                         <p class="projeto-categoria">ASP.NET Core | C# | Swagger | Supabase</p>
@@ -146,82 +184,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="projeto-card glass-card" data-category="csharp outros">
+                    <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Sistema de Reconhecimento Facial" class="projeto-img">
+                    <div class="projeto-overlay">
+                        <h3 class="projeto-title">Sistema de Reconhecimento Facial</h3>
+                        <p class="projeto-categoria">C# | Entity Framework | PostgreSQL (Neon)</p>
+                        <p>Solução desenvolvida em C# com EF Core e banco de dados PostgreSQL via Neon para validação de
+                            identidade por reconhecimento facial.</p>
+                        <div class="projeto-links">
+                            <a href="https://github.com/marcosviniciussdeveloper/ReconhecimentoFacialApp"
+                                target="_blank">Demo</a>
+                            <a href="https://github.com/marcosviniciussdeveloper/ReconhecimentoFacialApp"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-=======
-  <!-- Projetos -->
-<section class="projetos" id="projetos">
-    <div class="container">
-        <h2 class="section-title" style="text-align: center;">Meus Projetos</h2>
-        <div class="projetos-filter">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="csharp">.NET/C#</button>
-            <button class="filter-btn" data-filter="node">Node.js</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="outros">Outros</button>
->>>>>>> b7c1d8f4b59f67cbabd5df7521cdecc4799eef99
         </div>
-        <div class="projetos-grid" id="projetos-grid">
-            <div class="projeto-card" data-category="web csharp">
-                <img src="img/MeuPontoOnline.png" alt="Sistema de Ponto Online" class="projeto-img">
-                <div class="projeto-overlay">
-                    <h3 class="projeto-title">Sistema de Ponto Online</h3>
-                    <p class="projeto-categoria">C# | Razor Pages | Supabase</p>
-                    <p>Aplicação web para registro de ponto eletrônico com controle de horários de entrada e saída
-                        dos funcionários.</p>
-                    <div class="projeto-links">
-                        <a href="https://github.com/marcosviniciussdeveloper/Marcos_vinicius_portifolio"
-                            target="_blank">Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projeto-card" data-category="csharp">
-                <img src="img/Api.png" alt="API CRUD C#" class="projeto-img">
-                <div class="projeto-overlay">
-                    <h3 class="projeto-title">API CRUD C#</h3>
-                    <p class="projeto-categoria">.NET 8 | EF Core | Docker | Render</p>
-                    <p>Uma API RESTful construída em .NET 8 com suporte a Docker e deploy no Render.</p>
-                    <div class="projeto-links">
-                        <a href="https://api-crud-8jgp.onrender.com/swagger/index.html" target="_blank">Demo</a>
-                        <a href="https://github.com/marcosviniciussdeveloper/API-CRUD-C-" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NOVO PROJETO DE RECONHECIMENTO FACIAL -->
-            <div class="projeto-card" data-category="csharp outros">
-                <img src="img/ApiReconhecimento.png" alt="Projeto Reconhecimento Facial" class="projeto-img">
-                <div class="projeto-overlay">
-                    <h3 class="projeto-title">Sistema de Reconhecimento Facial</h3>
-                    <p class="projeto-categoria">C# | Entity Framework | PostgreSQL (Neon)</p>
-                    <p>Solução desenvolvida em C# com EF Core e banco de dados PostgreSQL via Neon para validação de identidade por reconhecimento facial.</p>
-                    <div class="projeto-links">
-                        <a href="https://github.com/marcosviniciussdeveloper/ReconhecimentoFacialApp" target="_blank">Demo</a>
-                        <a href="https://github.com/marcosviniciussdeveloper/ReconhecimentoFacialApp" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM DO NOVO PROJETO -->
-
-        </div>
-    </div>
-</section>
-
+    </section>
 
     <section class="contato" id="contato">
+        <div class="section-bg-contact">
+            <div class="wave-pattern"></div>
+        </div>
         <div class="container">
             <h2 class="section-title center">Entre em Contato</h2>
             <div class="contato-content">
                 <div class="contato-info">
-                    <div class="contato-item">
+                    <div class="contato-item glass-effect">
                         <div class="contato-icon">📧</div>
                         <div>
                             <h3>Email</h3>
                             <p>marcosviniciuss.dev@gmail.com</p>
                         </div>
                     </div>
-                    <div class="contato-item">
+                    <div class="contato-item glass-effect">
                         <div class="contato-icon">📍</div>
                         <div>
                             <h3>Localização</h3>
@@ -230,7 +228,7 @@
                     </div>
                 </div>
                 <div class="contato-form">
-                    <form id="formulario-contato">
+                    <form class="glass-effect" id="formulario-contato">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Seu Nome" required>
                         </div>
@@ -251,6 +249,9 @@
     </section>
 
     <footer>
+        <div class="footer-bg">
+            <div class="footer-pattern"></div>
+        </div>
         <div class="container">
             <div class="footer-content">
                 <div class="logo">Marcos Vinicius</div>
