@@ -1,0 +1,1535 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "sindautoAPI",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Agendamento": {
+      "post": {
+        "tags": [
+          "Agendamento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAgendamentoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAgendamentoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAgendamentoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Agendamento/Batch": {
+      "post": {
+        "tags": [
+          "Agendamento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AddAgendamentoDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AddAgendamentoDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AddAgendamentoDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Agendamento/BatchCancelamento": {
+      "post": {
+        "tags": [
+          "Agendamento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentosDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentosDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentosDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Agendamento/Cancelar": {
+      "post": {
+        "tags": [
+          "Agendamento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelamentoAgendamentoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Agendamento/ListarAgendamentosFuturos": {
+      "get": {
+        "tags": [
+          "Agendamento"
+        ],
+        "parameters": [
+          {
+            "name": "cpfInstrutor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjCFC",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Token"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Token"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Token"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Candidato/VincularAgendamento": {
+      "post": {
+        "tags": [
+          "Candidato"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Candidato/DesvincularAgendamento": {
+      "post": {
+        "tags": [
+          "Candidato"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarCandidatoAgDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CFC": {
+      "post": {
+        "tags": [
+          "CFC"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCfcDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCfcDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCfcDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Financeiro/ConsultarSituacaoFinanceira": {
+      "get": {
+        "tags": [
+          "Financeiro"
+        ],
+        "parameters": [
+          {
+            "name": "uuid_matricula",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Financeiro/ConsultarSituacaoFinanceiraCandidatoPorRenach": {
+      "get": {
+        "tags": [
+          "Financeiro"
+        ],
+        "parameters": [
+          {
+            "name": "renach",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Instrutor": {
+      "post": {
+        "tags": [
+          "Instrutor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddInstrutorDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddInstrutorDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddInstrutorDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Matricula": {
+      "post": {
+        "tags": [
+          "Matricula"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarMatriculaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarMatriculaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdicionarMatriculaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Matricula/BuscarMatricula": {
+      "get": {
+        "tags": [
+          "Matricula"
+        ],
+        "parameters": [
+          {
+            "name": "cpf",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Multicurso/ValidarCursosEspecializados": {
+      "post": {
+        "tags": [
+          "Multicurso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MulticursoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MulticursoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MulticursoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Multicurso/VerificarAtividadeRemunerada": {
+      "post": {
+        "tags": [
+          "Multicurso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCandidatoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCandidatoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCandidatoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Multicurso/ValidarConjugacaoServico": {
+      "post": {
+        "tags": [
+          "Multicurso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConjugarServicoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConjugarServicoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConjugarServicoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Multicurso/MinistraCursoEspecializado": {
+      "post": {
+        "tags": [
+          "Multicurso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Multicurso/MinistraCursoMototaxistaMotofrentista": {
+      "post": {
+        "tags": [
+          "Multicurso"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DadosCfcDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetornoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Notificacao/Financeiro": {
+      "put": {
+        "tags": [
+          "Notificacao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificacaoFinanceiroRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificacaoFinanceiroRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificacaoFinanceiroRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortalMatricula/ConsultarMatricula": {
+      "get": {
+        "tags": [
+          "PortalMatricula"
+        ],
+        "parameters": [
+          {
+            "name": "renach",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cfcCnpj",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoMatricula"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoMatricula"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoMatricula"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PortalMatricula/ConsultarPagamentoMatricula": {
+      "get": {
+        "tags": [
+          "PortalMatricula"
+        ],
+        "parameters": [
+          {
+            "name": "renach",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoPagamento"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoPagamento"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidatoPagamento"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddAgendamentoDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "agendamento": {
+            "$ref": "#/components/schemas/AgendamentoDTO"
+          },
+          "cfc": {
+            "$ref": "#/components/schemas/CfcAgendamento"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddCfcDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "cfc": {
+            "$ref": "#/components/schemas/CfcData"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddInstrutorDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "instrutor": {
+            "$ref": "#/components/schemas/InstrutorDTO"
+          },
+          "cfc": {
+            "$ref": "#/components/schemas/CFCInstrutor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdicionarCandidatoAgDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "agendamento": {
+            "$ref": "#/components/schemas/AgendamentoUuid"
+          },
+          "candidato": {
+            "$ref": "#/components/schemas/CandidatoAg"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AdicionarMatriculaDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "matricula": {
+            "$ref": "#/components/schemas/MatriculaDto"
+          },
+          "cfc": {
+            "$ref": "#/components/schemas/MatriculaCfcDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgendamentoCancel": {
+        "type": "object",
+        "properties": {
+          "uuid_agendamento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgendamentoDTO": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_servico": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "turno": {
+            "type": "string",
+            "nullable": true
+          },
+          "aulas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AulaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgendamentoUuid": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AulaDTO": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "curso": {
+            "type": "string",
+            "nullable": true
+          },
+          "periodo": {
+            "$ref": "#/components/schemas/Periodo"
+          },
+          "numero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "conteudo": {
+            "type": "string",
+            "nullable": true
+          },
+          "instrutor": {
+            "$ref": "#/components/schemas/InstrutorAula"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CFCInstrutor": {
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CancelamentoAgendamentoDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "agendamento": {
+            "$ref": "#/components/schemas/AgendamentoCancel"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CancelamentoAgendamentosDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "uuids_agendamentos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CandidatoAg": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CandidatoMatricula": {
+        "type": "object",
+        "properties": {
+          "numeroContrato": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomeCandidato": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataNascimento": {
+            "type": "string",
+            "nullable": true
+          },
+          "rgCandidato": {
+            "type": "string",
+            "nullable": true
+          },
+          "orgaoEmissorRg": {
+            "type": "string",
+            "nullable": true
+          },
+          "ufRg": {
+            "type": "string",
+            "nullable": true
+          },
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "logradouro": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "complemento": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "municipio": {
+            "type": "string",
+            "nullable": true
+          },
+          "ufCandidato": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "servico": {
+            "type": "string",
+            "nullable": true
+          },
+          "descricaoServico": {
+            "type": "string",
+            "nullable": true
+          },
+          "renach": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataAberturaRenach": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoriaPretendida": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomeCfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoCfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "cnpjCfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidadeCfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "contratoPago": {
+            "type": "boolean"
+          },
+          "dataContrato": {
+            "type": "string",
+            "nullable": true
+          },
+          "servicosContratados": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicoContratadoDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CandidatoPagamento": {
+        "type": "object",
+        "properties": {
+          "renach": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmacaoTeorico": {
+            "type": "boolean"
+          },
+          "confirmacaoPratico2Rodas": {
+            "type": "boolean"
+          },
+          "confirmacaoPratico4Rodas": {
+            "type": "boolean"
+          },
+          "temServicoCompartilhado": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CfcAgendamento": {
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CfcData": {
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "razao_social": {
+            "type": "string",
+            "nullable": true
+          },
+          "financeiro": {
+            "$ref": "#/components/schemas/Financeiro"
+          },
+          "detran": {
+            "$ref": "#/components/schemas/Detran"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConjugarServicoDTO": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "servicosIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicoDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DadosCandidatoDTO": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DadosCfcDTO": {
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Detran": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_filial": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Financeiro": {
+        "type": "object",
+        "properties": {
+          "client_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "client_secrect": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FinanceiroNotificacao": {
+        "type": "object",
+        "properties": {
+          "situacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_cobranca": {
+            "type": "string",
+            "nullable": true
+          },
+          "operadora": {
+            "type": "string",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "data_criacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_atualizacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_vencimento": {
+            "type": "string",
+            "nullable": true
+          },
+          "status_atual": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrutorAula": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstrutorDTO": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatriculaCandidatoDto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatriculaCfcDto": {
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatriculaDetranDto": {
+        "type": "object",
+        "properties": {
+          "renach": {
+            "type": "string",
+            "nullable": true
+          },
+          "situacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "servicoCodigo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatriculaDto": {
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "candidato": {
+            "$ref": "#/components/schemas/MatriculaCandidatoDto"
+          },
+          "detran": {
+            "$ref": "#/components/schemas/MatriculaDetranDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MulticursoDTO": {
+        "type": "object",
+        "properties": {
+          "cpf": {
+            "type": "string",
+            "nullable": true
+          },
+          "servicosIds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServicoDTO"
+            },
+            "nullable": true
+          },
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificacaoFinanceiroRequestDTO": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "operacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "data_hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "uuid_matricula": {
+            "type": "string",
+            "nullable": true
+          },
+          "cnpj": {
+            "type": "string",
+            "nullable": true
+          },
+          "financeiro": {
+            "$ref": "#/components/schemas/FinanceiroNotificacao"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Periodo": {
+        "type": "object",
+        "properties": {
+          "inicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fim": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RetornoDTO": {
+        "type": "object",
+        "properties": {
+          "isOK": {
+            "type": "boolean"
+          },
+          "mensagens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServicoContratadoDto": {
+        "type": "object",
+        "properties": {
+          "nomeServico": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorServico": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServicoDTO": {
+        "type": "object",
+        "properties": {
+          "servico_id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Token": {
+        "required": [
+          "acessToken"
+        ],
+        "type": "object",
+        "properties": {
+          "acessToken": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

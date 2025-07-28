@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Marcos Vinicius</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -26,18 +26,16 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-content fade-in">
                 <h1>Olá, eu sou <span style="color: #3498db;">Marcos Vinicius</span></h1>
-                <p>Desenvolvedor Fullstack | HTML | CSS | JavaScript | Node.js | C# | Docker</p>
+                <p>Desenvolvedor Backend | C# | Docker</p>
                 <a href="#projetos" class="btn">Ver meus projetos</a>
             </div>
         </div>
     </section>
 
-    <!-- Sobre mim -->
     <section class="sobre" id="sobre">
         <div class="container">
             <div class="sobre-content">
@@ -46,12 +44,9 @@
                 </div>
                 <div class="sobre-text">
                     <h2 class="section-title">Sobre Mim</h2>
-                    <p>Olá! Sou um desenvolvedor fullstack apaixonado por criar soluções tecnológicas eficientes e
+                    <p>Olá! Sou um desenvolvedor backend apaixonado por criar soluções tecnológicas eficientes e
                         inovadoras.</p>
-                    <p>No front-end, trabalho com HTML, CSS e JavaScript para construir interfaces intuitivas e
-                        responsivas.</p>
-                    <p>No back-end, sou especializado em Node.js e C#, desenvolvendo APIs robustas e sistemas
-                        escaláveis.</p>
+                    <p>Sou especializado em <strong>C#</strong>, desenvolvendo APIs robustas e sistemas escaláveis.</p>
                     <p>Possuo experiência com bancos de dados, Docker e implementação de arquiteturas modernas de
                         software.</p>
                     <div style="margin-top: 30px;">
@@ -62,20 +57,14 @@
         </div>
     </section>
 
-    <!-- Habilidades -->
     <section class="habilidades" id="habilidades">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">Minhas Habilidades</h2>
+            <h2 class="section-title center">Minhas Habilidades</h2>
             <div class="skills-container">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Desenvolvimento Frontend</h3>
-                    <p>HTML5, CSS3, JavaScript, Design Responsivo, UI/UX Básico</p>
-                </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔧</div>
                     <h3>Desenvolvimento Backend</h3>
-                    <p>Node.js, C#, .NET Core, REST APIs, Arquitetura de Software</p>
+                    <p>C#, .NET Core, REST APIs, Arquitetura de Software</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🗄️</div>
@@ -91,20 +80,17 @@
         </div>
     </section>
 
-    <!-- Projetos -->
     <section class="projetos" id="projetos">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">Meus Projetos</h2>
+            <h2 class="section-title center">Meus Projetos</h2>
             <div class="projetos-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="csharp">C#</button>
-                <button class="filter-btn" data-filter="node">Node.js</button>
                 <button class="filter-btn" data-filter="api">APIs</button>
                 <button class="filter-btn" data-filter="outros">Outros</button>
             </div>
             <div class="projetos-grid" id="projetos-grid">
-                <div class="projeto-card" data-category="web csharp">
+                <div class="projeto-card" data-category="csharp">
                     <img src="img/MeuPontoOnline.png" alt="Sistema de Ponto Online" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">Sistema de Ponto Online</h3>
@@ -114,12 +100,10 @@
                         <div class="projeto-links">
                             <a href="https://github.com/marcosviniciussdeveloper/Marcos_vinicius_portifolio"
                                 target="_blank">Demo</a>
-                            <a href="https://github.com/marcosviniciussdeveloper/Marcos_vinicius_portifolio"
-                                target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div class="projeto-card" data-category="csharp">
+                <div class="projeto-card" data-category="csharp api">
                     <img src="img/Api.png" alt="API CRUD C#" class="projeto-img">
                     <div class="projeto-overlay">
                         <h3 class="projeto-title">API CRUD C#</h3>
@@ -145,14 +129,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="projeto-card" data-category="csharp api outros">
+                    <img src="img/MeuCombustivel.png" alt="API Meu Combustível" class="projeto-img">
+                    <div class="projeto-overlay">
+                        <h3 class="projeto-title">API Meu Combustível</h3>
+                        <p class="projeto-categoria">ASP.NET Core | C# | Swagger | Supabase</p>
+                        <p>API para gerenciamento de abastecimentos e veículos, desenvolvida com ASP.NET Core e C#,
+                            documentada com Swagger e hospedada no Render. Utiliza Supabase como banco de dados.</p>
+                        <div class="projeto-links">
+                            <a href="https://gestaodecombustivelapp.onrender.com/index.html" target="_blank">Demo</a>
+                            <a href="https://meu-combustivel.onrender.com/swagger/index.html" target="_blank">API
+                                Docs</a>
+                            <a href="https://github.com/marcosviniciussdeveloper/GestaoDeCombustivelApp"
+                                target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
     <section class="contato" id="contato">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">Entre em Contato</h2>
+            <h2 class="section-title center">Entre em Contato</h2>
             <div class="contato-content">
                 <div class="contato-info">
                     <div class="contato-item">
@@ -160,13 +159,6 @@
                         <div>
                             <h3>Email</h3>
                             <p>marcosviniciuss.dev@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contato-item">
-                        <div class="contato-icon">📱</div>
-                        <div>
-                            <h3>Telefone</h3>
-                            <p>+55 (71) 98440-7507</p>
                         </div>
                     </div>
                     <div class="contato-item">
@@ -198,7 +190,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -216,91 +207,7 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projetoCards = document.querySelectorAll('.projeto-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const filter = button.getAttribute('data-filter');
-                projetoCards.forEach(card => {
-                    const categories = card.getAttribute('data-category').split(' ');
-                    card.style.display = (filter === 'all' || categories.includes(filter)) ? 'block' : 'none';
-                });
-            });
-        });
-
-        const contatoForm = document.getElementById('formulario-contato');
-
-        contatoForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            contatoForm.reset();
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        });
-
-        document.querySelectorAll('.skill-card, .projeto-card, .section-title').forEach(element => {
-            observer.observe(element);
-        });
-
-        function adicionarProjeto(titulo, categoria, descricao, imgSrc, demoLink, codeLink) {
-            const projetosGrid = document.getElementById('projetos-grid');
-            const novoCard = document.createElement('div');
-            novoCard.className = 'projeto-card';
-            novoCard.setAttribute('data-category', categoria);
-            novoCard.innerHTML = `
-                <img src="${imgSrc}" alt="${titulo}" class="projeto-img">
-                <div class="projeto-overlay">
-                    <h3 class="projeto-title">${titulo}</h3>
-                    <p class="projeto-categoria">${categoria}</p>
-                    <p>${descricao}</p>
-                    <div class="projeto-links">
-                        <a href="${demoLink}" target="_blank">Demo</a>
-                        <a href="${codeLink}" target="_blank">GitHub</a>
-                    </div>
-                </div>`;
-            projetosGrid.appendChild(novoCard);
-            observer.observe(novoCard);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
