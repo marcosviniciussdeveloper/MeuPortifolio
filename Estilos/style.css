@@ -40,7 +40,6 @@ nav {
     align-items: center;
 }
 
-/* CORREÇÃO: Logo com contraste no fundo escuro, usando a cor de destaque (#f59e1b) e branco */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -60,7 +59,6 @@ nav {
 }
 
 .nav-links a {
-    /* CORREÇÃO: Cor do link branca para visibilidade no fundo escuro */
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -75,7 +73,6 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    /* Ajuste de cor do gradiente para ser visível e seguir o tema */
     background: linear-gradient(100deg, #f59e1b, #e20000); 
     transition: width 0.3s;
 }
@@ -85,7 +82,6 @@ nav {
 }
 
 .nav-links a:hover {
-    /* CORREÇÃO: Cor de destaque para hover */
     color: #f59e1b;
 }
 
@@ -94,26 +90,23 @@ nav {
     cursor: pointer;
     background: none;
     border: none;
-    /* CORREÇÃO: Cor do ícone branca no fundo escuro */
     color: #ffffff;
     font-size: 1.5rem;
 }
 
 /* Hero Section */
 .hero {
-    /* REMOÇÃO DO GRADIENTE/IMAGEM DE FUNDO DAQUI, POIS CONFLITAVA COM ::BEFORE */
-    /* Para restaurar a imagem, ela deve ser colocada no ::before ou ser visível sob o gradiente */
-    height: 100vh;
+   background: radial-gradient(circle at center ,#1a1a1a 0%, #000000 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     position: relative;
+    height: 100vh;
     overflow: hidden;
 }
 
-/* CORREÇÃO: Torna o gradiente do ::before mais sutil (opacidade menor) */
 .hero::before {
     content: '';
     position: absolute;
@@ -121,15 +114,13 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Gradiente escuro sutil para que o fundo (se houver) apareça */
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(22, 22, 22, 0.8));
     animation: pulse 8s ease-in-out infinite;
 }
 
-/* CORREÇÃO: Restaura a opacidade da animação pulse para que o fundo seja sutilmente visível */
 @keyframes pulse {
-    0%, 100% { opacity: 0.8; } /* Aumentei a opacidade base */
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0.4; } 
+    50% { opacity: 0.9; }
 }
 
 .hero .container {
