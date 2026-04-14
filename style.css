@@ -542,14 +542,26 @@ p {
     
     .timeline::before {
         left: 20px;
+        transform: none;
     }
     
-    .timeline-item {
+    .timeline-item, .timeline-item:nth-child(odd) {
         padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .timeline-content {
+        margin-left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 0;
     }
     
     .timeline-dot {
-        left: 14px;
+        left: 12px;
+        transform: none;
     }
 }
 
