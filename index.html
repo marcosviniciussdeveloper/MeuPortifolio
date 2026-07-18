@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        try {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+        } catch {
+            document.documentElement.dataset.theme = 'dark';
+        }
+    </script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,15 +27,20 @@
 
     <nav class="navbar">
         <div class="logo">MV_</div>
-        <ul class="nav-links">
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-        </ul>
+        <div class="nav-actions">
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#certificacoes">Certificações</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema claro" title="Ativar tema claro">
+                <i class="fa-solid fa-sun theme-toggle-icon" aria-hidden="true"></i>
+            </button>
+        </div>
     </nav>
 
     <main>
@@ -136,21 +149,37 @@
         <section id="certificacoes" class="section">
             <div class="container">
                 <h2 class="section-title cert-title">Certificações</h2>
-                <div class="certifications-carousel">
-                    <!-- Badge AWS Cloud Practitioner -->
-                    <a href="https://www.credly.com/badges/8815aba9-852c-4480-a6cc-fecb6c919bc9/public_url" target="_blank" class="cert-card" title="Verificar certificado AWS Cloud Practitioner no Credly">
-                        <img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="Selo AWS Certified Cloud Practitioner">
-                    </a>
-                    
-                    <!-- Badge 2 -->
-                    <a href="https://www.credly.com/badges/8d9be8ab-11c0-4ee5-b6ea-f634818e0c84/public_url" target="_blank" class="cert-card" title="Verificar certificado no Credly">
-                        <img src="https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/linkedin_thumb_image.png" alt="Selo Certificação">
-                    </a>
+                <div class="certifications-carousel-container">
+                    <button class="cert-carousel-button prev" type="button" aria-label="Certificação anterior">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div class="certifications-carousel" tabindex="0" aria-label="Carrossel de certificações">
+                        <!-- Badge AWS Cloud Practitioner -->
+                        <a href="https://www.credly.com/badges/8815aba9-852c-4480-a6cc-fecb6c919bc9/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" title="Verificar certificado AWS Cloud Practitioner no Credly">
+                            <img src="https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="Selo AWS Certified Cloud Practitioner">
+                        </a>
 
-                    <!-- Badge 3 -->
-                    <a href="https://www.credly.com/badges/5f13b090-6caf-43e9-9c7d-fb920f908f30/public_url" target="_blank" class="cert-card" title="Verificar certificado no Credly">
-                        <img src="https://images.credly.com/images/b3885091-25bc-42d0-8989-34cca82f3056/linkedin_thumb_blob" alt="Selo Certificação">
-                    </a>
+                        <!-- Badge AWS re/Start Graduate -->
+                        <a href="https://www.credly.com/badges/8d9be8ab-11c0-4ee5-b6ea-f634818e0c84/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" title="Verificar certificado AWS re/Start Graduate no Credly">
+                            <img src="https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png" alt="Selo AWS re/Start Graduate">
+                        </a>
+
+                        <!-- Badge AWS Serverless -->
+                        <a href="https://www.credly.com/badges/5f13b090-6caf-43e9-9c7d-fb920f908f30/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" title="Verificar certificado AWS Serverless no Credly">
+                            <img src="https://images.credly.com/images/b3885091-25bc-42d0-8989-34cca82f3056/blob" alt="Selo AWS Serverless">
+                        </a>
+
+                        <!-- Badge AWS Application Networking Demonstrated -->
+                        <a href="https://www.credly.com/badges/37075738-dbae-42c3-98be-6fd301ab9e51/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" title="Verificar certificado AWS Application Networking Demonstrated no Credly">
+                            <img src="https://images.credly.com/images/ed8cf03b-6269-4265-a65b-68e67e49ce6b/blob" alt="Selo AWS Application Networking Demonstrated">
+                        </a>
+                    </div>
+                    <button class="cert-carousel-button next" type="button" aria-label="Próxima certificação">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                    <div class="cert-carousel-progress" role="progressbar" aria-label="Progresso das certificações" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -329,6 +358,42 @@
             </div>
         </section>
 
+        <div class="project-modal" id="project-modal" aria-hidden="true">
+            <div class="project-modal-backdrop" data-project-modal-close></div>
+            <article class="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+                <div class="project-modal-accent"></div>
+                <button class="project-modal-close" type="button" aria-label="Fechar detalhes do projeto" data-project-modal-close>
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+
+                <div class="project-modal-content">
+                    <span class="project-modal-eyebrow">Detalhes do projeto</span>
+                    <h2 id="project-modal-title"></h2>
+
+                    <section class="project-modal-section">
+                        <h3>Descrição</h3>
+                        <p id="project-modal-description"></p>
+                    </section>
+
+                    <section class="project-modal-section">
+                        <h3>Tecnologias</h3>
+                        <div class="project-modal-techs" id="project-modal-techs"></div>
+                    </section>
+
+                    <section class="project-modal-section">
+                        <h3>Principais funcionalidades</h3>
+                        <ul class="project-modal-features" id="project-modal-features"></ul>
+                    </section>
+
+                    <a class="project-modal-github" id="project-modal-github" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        Ver código no GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+
     <footer id="contato" class="footer">
         <div class="container">
             <h2 class="footer-title">Vamos nos conectar?</h2>
@@ -336,14 +401,14 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/marcosviniciussdev/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/marcosviniciussdeveloper" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:marcosviniciuss.dev@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=marcosviniciusscontato%40gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar e-mail para Marcos Vinícius" aria-label="Enviar e-mail para Marcos Vinícius"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <p class="copyright">&copy; 2026 Marcos Vinícius. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5571984407507" target="_blank" class="whatsapp-float" title="Fale comigo no WhatsApp">
+    <a href="https://wa.me/557193891475" target="_blank" class="whatsapp-float" title="Fale comigo no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
